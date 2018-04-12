@@ -6,12 +6,12 @@ console.log(myName, "one");
 }
 console.log(myName, "three");
 
-
+*/
 let birthDay = '10/14/81';
 let rightNow = new Date(birthDay);
 alert(rightNow);
 
-*/
+
 
 /*
 //MATH OBJECT
@@ -37,3 +37,16 @@ const isOfAge = confirm("Are you 21 or older?");
 //promt
 const userStory = prompt("Tell me, do you take walks.");
 console.log(userStory);
+
+alert(new Date());
+
+const firstName = prompt("What's your first name?");
+const lastName = prompt("What's your last name?");
+console.log(firstName);
+alert(lastName);
+const birthday = confirm("Is today your birthday?");
+if (birthday) {
+  alert("Cheers!Happy Birthday!!!!");
+} else {
+  alert("Sad. Sucks to be you");
+};
