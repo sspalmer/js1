@@ -6,14 +6,14 @@ console.log(myName, "one");
 }
 console.log(myName, "three");
 
-*/
+
 let birthDay = '10/14/81';
 let rightNow = new Date(birthDay);
 alert(rightNow);
 
 
 
-/*
+
 //MATH OBJECT
 alert(Math.PI);
 
@@ -29,7 +29,7 @@ let myObject = {
   teacherRating: 1000000
 }
 */
-
+/*
 //alert
 alert("blah blah blah");
 //confirm
@@ -40,13 +40,22 @@ console.log(userStory);
 
 alert(new Date());
 
+*/
+
 const firstName = prompt("What's your first name?");
 const lastName = prompt("Hi "+ firstName+ " what's your last name?");
 console.log(firstName);
-alert(lastName);
-const birthday = confirm(firstName+" is today your birthday?");
-if (birthday) {
-  alert("Cheers!!!Happy Birthday!");
+alert("Hello "+firstName+" "+lastName);
+
+
+var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+var birthYear = prompt("What year were you born?");
+var birthMonth = prompt("What month were you born?");
+const birthDay = prompt("What day in "+birthMonth+" were you born?");
+if (birthMonth.length<=2) {
+  var birthDate = new Date(birthYear, birthMonth-1, birthDay);
 } else {
-  alert("Sad. Sucks to be you.");
-};
+  var birthDate = new Date(birthYear, month.indexOf(birthMonth), birthDay);
+}
+alert(firstName+lastName+ " was born on "+birthDate);
