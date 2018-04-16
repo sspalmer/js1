@@ -58,4 +58,4 @@ if (birthMonth.length<=2) {
 } else {
   var birthDate = new Date(birthYear, month.indexOf(birthMonth), birthDay);
 }
-alert(firstName+lastName+ " was born on "+birthDate);
+alert(firstName+" "+lastName+" was born on "+birthDate);
