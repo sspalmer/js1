@@ -1,121 +1,105 @@
 /*
-//String Interpolation
-var myName = "Ryeker";
+//fields
+let emailArr;
+var yourEmail;
 
-alert('Hello, ' + myName + '!'); //ES5
+while (true) {
+  //user input
+  var yourEmail = prompt("What's your email?");
+  emailArr = yourEmail.split("");
 
-alert(`Hello, ${myName}!`); //ES6
+  if (!(emailArr.includes("@"))) {
+    var yourEmail = prompt("Invalid. Please try again.");
+  }
+  else if (!(emailArr.includes("."))) {
+    var yourEmail = prompt("Invalid. Please try again.");
+  }
+  else {
+    alert("Thanks for providing a valid email.");
+  }
+}
 */
 /*
-// loop
-for (let i = 0; i < 10; i++) {
-  console.log(i);
+
+//switch
+var numOfProjects = prompt("How many projects do you have? You can choose a number 0-2.");
+switch(parseInt(numOfProjects)) {
+  case 0:
+    alert("You won't have a projects section on your page");
+    break;
+    case 1:
+    alert("You'll only have one showing");
+    break;
+    case 2:
+    alert("You'll only have one showing");
+        break;
+  default:
+    alert('You didn\'t follow the rules.');
 }
 
-for (let i = 0; i < 10 || i < 15; i++) {
-  console.log(i);
+*/
+
+/*
+function chooseAdventure() {
+    while (true) {
+        var location = prompt("Would you like to go to the store or relax at home? Respond by typing store or home", 'store, home');
+        if (location == "store") {
+            var what = prompt("Are you going to bake or bbq?", 'bake, bbq');
+        }
+        if (what == "bake") {
+            prompt("You made some awesome cupcakes!");
+            break;
+        }
+        if(what == "bbq") {
+            prompt("You made some awesome kabobs!");
+            break;
+        }
+        if (location == "home") {
+            var activity = prompt("Would you like to go to watch netflix or go swimming?", 'netflix, swimming');
+        }
+        if (activity == "netflix") {
+            alerts("You watched Jessica Jones");
+            break;
+        }
+        if (activity == "swimming") {
+            prompt("You cooled off in the pool");
+            break;
+        }
+        else {
+            prompt("Sorry, you entered the wrong input or it wasn't lower-case.");
+            break;
+        }
+    }
 }
-
-
-for (let i = 0; i < 10 || i < 15; i++) {
-  if (!(i%2===0))
-  console.log(i);
-}
-
-*/
-/*
-// IN CLASS
-// Declare a var and set it equal to any string.
-var favBook = "Perks to being a wallflower";
-// Declare a second var and call new String() on the same string (this will create an instance of a JS string object.)
-var aBook = new String(favBook);
-
-// Use the logical operators and a third var to determine if they are strictly equal.
-var isEqual = (favBook === aBook);
-console.log(isEqual);
-// Now use the logical operators and a fourth var to determine if they are loosely equal.
-var isEqual = (favBook == aBook);
-console.log(isEqual);
-// Why did you get the result you got?
-// Loose == checks value
-// Strict === checks value and type
-
-*/
-/*
-
-var yourName = prompt("What's your name?");
-console.log(yourName.length); //if name is empty length returns 0
-console.log(!yourName); //if name is empty this returns true
-
-*/
-/*
-
-//Objects will always return false because they save location
-let obj1 = {
-  name : "Ryeker"
-};
-
-let obj2 = {
-  name : "Ryeker"
-};
-
-console.log(obj1 === obj2); // returns false because objects save location pointers not the value.
-
-*/
-/*
-
-//NaN
-console.log(typeof("three" * 15)); // Nan's type is a number
-console.log(NaN === NaN); //returns false
-console.log(isNaN("three" * 15)); // isNaN returns true, it is not a number
-
-*/
-/*
-// parseInt make this a number
-let myNumber = prompt("Give me a number!!!");
-alert(
-  isNaN((parseInt(myNumber) / 2))
-);
+chooseAdventure();
 */
 
 /*
-// toString make this to a String
-let string = prompt("Tell me your favorite number.");
-string.toString();
-alert(`Your favorite number is ${string}`);
+//ternaries  condition ? expression 1: expression 2
+var yourAge = prompt('How old are you');
+(parseInt(yourAge)) >= 18 ? alert('You can buy a lotto ticket') : alert('You can\'t buy a lotto ticket')
 */
 
-/*
-let myNum = prompt("Enter a number:");
-myNum = parseInt(myNum);
 
-console.log(myNum + 42);
-console.log(myNum - 42);
-console.log(myNum * 42);
-console.log(myNum / 42);
-console.log(myNum += 42); // myNum = myNum + 42
-console.log(myNum -= 42); // myNum = myNum - 42
-console.log(myNum *= 42); // myNum = myNum * 42
-console.log(myNum /= 42); // myNum = myNum / 42
-*/
 
-/*
-const best = 42;
-const cheese = "delicious";
+//Arrays
+let arr = ["Christa", "Ryeker", "Bryan", "Jeff", "Sam"];
 
-if(best === "42"){
-  console.log("Hooray!!!");
-} else if(cheese == "delicious"){
-  console.log("yes it is!");
-} else {
-  console.log("Boooo:");
-};
-*/
+//alert(Array.isArray(arr)); //boolean. check data that you get from another source
 
-// Asks for the user's age using the Date object.
-var birthDate = new Date(prompt("What's your birthdate? yyyy/mm/dd"));
-console.log(birthDate);
-// if the user is over 18, allow them to proceed, otherwise alert the user that they are not old enough.
-// Now that all your users at this point are at least 18, ask if they are less than 80 years old.
-// Now ask the users who are between 18 and 80 if they like Star Wars. If they are over 80, ask if they like prunes.
-// If they say they don't Star Wars, end the program. In all other cases, alert them with a message.
+//arr.shift();
+//console.log(arr);
+
+let bestEver = arr.slice(); // no parrameters makes an exact copy of original array
+bestEver.push("Christa");
+console.log(arr, "Original");
+console.log(bestEver, "Sliced Array");
+
+let noCoteacher = arr.slice(1); //returns copy of arr starting at index 1
+console.log(noCoteacher);
+
+let teacherIndex = arr.indexOf("Ryeker");
+console.log(teacherIndex);
+
+let backwards = arr.sort();
+console.log(backwards);
