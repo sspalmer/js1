@@ -81,7 +81,7 @@ var yourAge = prompt('How old are you');
 */
 
 
-
+/*
 //Arrays
 let arr = ["Christa", "Ryeker", "Bryan", "Jeff", "Sam"];
 
@@ -103,3 +103,44 @@ console.log(teacherIndex);
 
 let backwards = arr.sort();
 console.log(backwards);
+*/
+
+
+//TAKEHOME4 BUT FROM DAY3
+// Prompts your user for their name.
+let yourName = prompt("What's your name?");
+// Next, ask the user's favorite color. (Provide the user with the basic 10 colors as options i.e. red, orange, yellow, green, blue, pink, purple, black, white, and grey).
+let favColor = prompt("Of these colors, which one is your favorite? red, orange, yellow, green, blue, pink, purple, black, white, and grey:");
+// Depending on the color, write 9 different responses for the possible answers. Include the user's name in the response message.
+switch (favColor) {
+  case "red":
+  case "purple":
+    alert("Red and purple, the color of a lychee and mangosteen. Tasty choice "+yourName+"!");
+    break;
+  case "orange":
+    alert("Orange, the color of the sun setting sky. Beautiful choice ${yourName}.");
+    break;
+  case "yellow":
+    alert("Yellow, the color of the morning glow. How refreshing ${yourName}.");
+    break;
+  case "green":
+    alert("Green, the color of a young rice paddy. Excellent choice ${yourName}.");
+    break;
+  case "blue":
+    alert("Blue, the color of the most comfortable jeans. Relaxing choice ${yourName}.");
+    break;
+  case "pink":
+    alert("Pink, the color of that Big Chew bubble gum from childhood. Great memories ${yourName}.");
+    break;
+  case "black":
+    alert("Black, the color of rubber hitting the road. Fun choice ${yourName}.");
+    break;
+  case "white":
+    alert("White, the color of that random rock that stands out on the watery shores. Interesting choice ${yourName}.");
+    break;
+  case "grey":
+    alert("Grey, the color of most modern decor lately. Trendy choice ${yourName}.");
+    break;
+  default:
+    alert("Sorry ${yourName}, but ${faveColor} isn't one of the color options right now.");
+}
