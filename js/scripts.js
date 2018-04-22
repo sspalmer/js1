@@ -115,32 +115,32 @@ let favColor = prompt("Of these colors, which one is your favorite? red, orange,
 switch (favColor) {
   case "red":
   case "purple":
-    alert("Red and purple, the color of a lychee and mangosteen. Tasty choice "+yourName+"!");
+    alert(`Red and purple, the color of a lychee and mangosteen. Tasty choice ${yourName}!`);
     break;
   case "orange":
-    alert("Orange, the color of the sun setting sky. Beautiful choice ${yourName}.");
+    alert(`Orange, the color of the sun setting sky. Beautiful choice ${yourName}.`);
     break;
   case "yellow":
-    alert("Yellow, the color of the morning glow. How refreshing ${yourName}.");
+    alert(`Yellow, the color of the morning glow. How refreshing ${yourName}.`);
     break;
   case "green":
-    alert("Green, the color of a young rice paddy. Excellent choice ${yourName}.");
+    alert(`Green, the color of a young rice paddy. Excellent choice ${yourName}.`);
     break;
   case "blue":
-    alert("Blue, the color of the most comfortable jeans. Relaxing choice ${yourName}.");
+    alert(`Blue, the color of the most comfortable jeans. Relaxing choice ${yourName}.`);
     break;
   case "pink":
-    alert("Pink, the color of that Big Chew bubble gum from childhood. Great memories ${yourName}.");
+    alert(`Pink, the color of that Big Chew bubble gum from childhood. Great memories ${yourName}.`);
     break;
   case "black":
-    alert("Black, the color of rubber hitting the road. Fun choice ${yourName}.");
+    alert(`Black, the color of rubber hitting the road. Fun choice ${yourName}.`);
     break;
   case "white":
-    alert("White, the color of that random rock that stands out on the watery shores. Interesting choice ${yourName}.");
+    alert(`White, the color of that random rock that stands out on the watery shores. Interesting choice ${yourName}.`);
     break;
   case "grey":
-    alert("Grey, the color of most modern decor lately. Trendy choice ${yourName}.");
+    alert(`Grey, the color of most modern decor lately. Trendy choice ${yourName}.`);
     break;
   default:
-    alert("Sorry ${yourName}, but ${faveColor} isn't one of the color options right now.");
+    alert(`Sorry ${yourName}, but ${faveColor} isn't one of the color options right now.`);
 }
