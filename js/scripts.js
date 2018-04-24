@@ -81,7 +81,7 @@ var yourAge = prompt('How old are you');
 */
 
 
-
+/*
 //Arrays
 let arr = ["Christa", "Ryeker", "Bryan", "Jeff", "Sam"];
 
@@ -103,3 +103,69 @@ console.log(teacherIndex);
 
 let backwards = arr.sort();
 console.log(backwards);
+
+*/
+
+/*
+let shoppingList = [];
+
+let item1 = "Detergent";
+let item2 = "Cheese";
+let item3 = "Crackers";
+let item4 = "wine";
+
+shoppingList.push(item1, item2, item3, item4);
+
+console.log(shoppingList);
+*/
+
+/*
+let favoriteMovie = ['Star Wars VI', '1983'];
+let secondFavorite = ['Return of the King', '2003'];
+let thirdFavorite = ['Equilibrium', '2002'];
+let myFavoriteMovies = [];
+myFavoriteMovies.push(favoriteMovie, secondFavorite, thirdFavorite);
+
+console.log(myFavoriteMovies[0][1], myFavoriteMovies[1][1], myFavoriteMovies[2][1]);
+*/
+
+//Try It
+// In your scripts.js file, create 5 arrays, each with one of your top 5 movies' title and the main character's name
+let movie1 = ["Wonder Woman", "Bad Ass Woman"];
+let movie2 = ["The Jungle Book", "Moglee"];
+let movie3 = ["Big Fish", "The Wonderer"];
+//
+// Add all of these arrays to a final array named favoriteMovies
+let favoriteMovies = [];
+favoriteMovies.push(movie1, movie2, movie3);
+//console.log(favoriteMovies);
+// Create an array with just the titles of your favorite movies and alert it
+// let movieTitles = [];
+// movieTitles.push(movie1[0], movie2[0], movie3[0]);
+// alert(movieTitles);
+
+
+// let i = 0;
+//
+// while (i < favoriteMovies.length) {
+//   console.log(i);
+//   console.log(favoriteMovies[i][0]);
+//   i++;
+// }
+
+// Create another array with your favorite and least favorite of the top 5 and console.log it.
+// Check the length of your favoriteMovies array by alerting it.
+
+// Now, using your favoriteMovies array:
+//
+// Write a for loop to iterate over the array
+// Find your favorite movie by searching for the title in the loop
+// Once the program finds your favorite movie, have it alert the title and year it was made
+
+for(let i = 0; i < favoriteMovies.length; i++) {
+  //console.log(i);
+  console.log(favoriteMovies[i][0]);
+  if (favoriteMovies[i][0] === "Big Fish") {
+    alert(favoriteMovies[i][0]);
+  }
+}
