@@ -129,6 +129,7 @@ myFavoriteMovies.push(favoriteMovie, secondFavorite, thirdFavorite);
 console.log(myFavoriteMovies[0][1], myFavoriteMovies[1][1], myFavoriteMovies[2][1]);
 */
 
+/*
 //Try It
 // In your scripts.js file, create 5 arrays, each with one of your top 5 movies' title and the main character's name
 let movie1 = ["Wonder Woman", "Bad Ass Woman"];
@@ -169,3 +170,38 @@ for(let i = 0; i < favoriteMovies.length; i++) {
     alert(favoriteMovies[i][0]);
   }
 }
+
+*/
+
+//Takehome
+
+// Creates an array of things you need or want to do this weekend by collecting three todos from the user.
+let toDoList = [];
+
+for(let i = 1; i < 4; i++) {
+  toDoList.push(prompt(`Enter item ${i} that you would like to get done.`));
+};
+
+console.log(toDoList);
+
+// Using a for loop, change the items in the array by adding days they should be completed by to each index.
+// Hint: which data type is best suited for your todo items?
+for(let i = 0; i < toDoList.length; i++) {
+  console.log(i);
+  let numOfDays = prompt(`How many days will it take to accomplish the following task? ${toDoList[i]}`);
+  let toDoItem = [toDoList[i], numOfDays];
+  toDoList.splice([i], 1, toDoItem);
+};
+
+console.log(toDoList);
+
+// Using a while loop, find the task that will take the longest and log it to the console.
+let longestTaskTime = 0;
+var i = 0;
+
+while (i < toDoList.length) {
+  let longestTaskTime
+  i++;
+};
+// Using a do while loop, add the string 'done' to all the tasks other than the one that will take the longest
+// Finally, alert all the tasks that are marked done in the todo array.
