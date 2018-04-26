@@ -197,16 +197,25 @@ console.log(`List with time: ${toDoList}`);
 
 // Using a while loop, find the task that will take the longest and log it to the console.
 let longestTask = toDoList[0];
-var i = 0;
+let m = 0;
 
-while (i < toDoList.length) {
+while (m < toDoList.length) {
   if (parseInt(toDoList[i][1]) >= parseInt(longestTask[1])) {
     longestTask = toDoList[i];
   }
-  i++;
+  m++;
 };
 
 console.log(`Longest Task: ${longestTask}`);
 
 // Using a do while loop, add the string 'done' to all the tasks other than the one that will take the longest
+let z = 0;
+longest.push('this');
+
+do {
+  if(toDoList[z][toDoList[z].length - 1] !== "this") {
+    toDoList[z].push("done");
+  };
+  z++;
+};
 // Finally, alert all the tasks that are marked done in the todo array.
