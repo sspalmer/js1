@@ -182,7 +182,7 @@ for(let i = 1; i < 4; i++) {
   toDoList.push(prompt(`Enter item ${i} that you would like to get done.`));
 };
 
-console.log(toDoList);
+console.log(`Original: ${toDoList}`);
 
 // Using a for loop, change the items in the array by adding days they should be completed by to each index.
 // Hint: which data type is best suited for your todo items?
@@ -193,15 +193,20 @@ for(let i = 0; i < toDoList.length; i++) {
   toDoList.splice([i], 1, toDoItem);
 };
 
-console.log(toDoList);
+console.log(`List with time: ${toDoList}`);
 
 // Using a while loop, find the task that will take the longest and log it to the console.
-let longestTaskTime = 0;
+let longestTask = toDoList[0];
 var i = 0;
 
 while (i < toDoList.length) {
-  let longestTaskTime
+  if (parseInt(toDoList[i][1]) >= parseInt(longestTask[1])) {
+    longestTask = toDoList[i];
+  }
   i++;
 };
+
+console.log(`Longest Task: ${longestTask}`);
+
 // Using a do while loop, add the string 'done' to all the tasks other than the one that will take the longest
 // Finally, alert all the tasks that are marked done in the todo array.
