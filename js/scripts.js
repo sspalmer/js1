@@ -121,11 +121,13 @@ console.log(myString.toUpperCase()); //toUpperCase() is a method
 let myString = prompt("What's the first thing you do in the morning?");
 
 function sentence (inputString) {
-  let separate = inputString.split();
-  console.log(separate);
+  if (inputString[inputString.length-1] !== ".") {
+    inputString = inputString + ".";
+  };
+  return inputString[0].toUpperCase() + inputString.slice(1);
 };
 
-sentence(myString);
+alert(sentence(myString));
 
 // Create a string that will flip the position of the first and second half of a string. For example, the string “abcdef” would be returned as “defabc”. Hint: use substring.
 // BONUS: If you are bored by all that, write a function that checks if a given string is a palindrome.
