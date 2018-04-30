@@ -84,17 +84,48 @@ let use = parseInt(prompt("How many Hershey Kisses can you eat in a day?", "3"))
 function calculate(i, j) {
   if (!isNaN(i) && !isNaN(j)) {
     return (80-i)*365*use;
-  } else {
-    alert("That's not a number.")
-    calculate(i,j);
+  } //else {
+  //  alert("That's not a number.");
+  //  calculate(i,j);
   };
 };
 
 alert(`You'll need ${calculate(age, use)} Kisses to last you until you're 80!`);
 */
 
+/*
 //METHODS are a type of FUNCTION
 //A method is implicitly passed the object on which it was called.
 var myString = "hello world";
 console.log(myString.length); //length is a method
 console.log(myString.toUpperCase()); //toUpperCase() is a method
+*/
+
+//TAKEHOME
+// Take a number and return the square of that number (power of 2).
+// If a non-number argument is passed into the function, alert NaN and prompt for another response
+// let number = parseInt(prompt("Let's square the number: ", "5"));
+//
+// function square (i) {
+//   if (!isNaN(i)) {
+//     return Math.pow(i, 2);
+//   } else {
+//     let newNum = parseInt(prompt("That wasn't a number. Enter a REAL number: "));
+//     return square(newNum);
+//   };
+// };
+//
+// alert(square(number));
+
+// In a second function, capitalize the first letter of a string and add a period (.) to the end of the string if it doesn't already end with a period
+let myString = prompt("What's the first thing you do in the morning?");
+
+function sentence (inputString) {
+  let separate = inputString.split();
+  console.log(separate);
+};
+
+sentence(myString);
+
+// Create a string that will flip the position of the first and second half of a string. For example, the string “abcdef” would be returned as “defabc”. Hint: use substring.
+// BONUS: If you are bored by all that, write a function that checks if a given string is a palindrome.
