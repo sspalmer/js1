@@ -118,16 +118,25 @@ console.log(myString.toUpperCase()); //toUpperCase() is a method
 // alert(square(number));
 
 // In a second function, capitalize the first letter of a string and add a period (.) to the end of the string if it doesn't already end with a period
-let myString = prompt("What's the first thing you do in the morning?");
-
-function sentence (inputString) {
-  if (inputString[inputString.length-1] !== ".") {
-    inputString = inputString + ".";
-  };
-  return inputString[0].toUpperCase() + inputString.slice(1);
-};
-
-alert(sentence(myString));
+// let myString = prompt("What's the first thing you do in the morning?");
+//
+// function sentence (inputString) {
+//   if (inputString[inputString.length-1] !== ".") {
+//     inputString = inputString + ".";
+//   };
+//   return inputString[0].toUpperCase() + inputString.slice(1);
+// };
+//
+// alert(sentence(myString));
 
 // Create a string that will flip the position of the first and second half of a string. For example, the string “abcdef” would be returned as “defabc”. Hint: use substring.
+let myString = prompt("What's the first thing you do in the morning?");
+
+function flip(newString) {
+  let splitPosition = Math.round(newString.length / 2);
+  return newString.substr(splitPosition) + newString.substr(0, splitPosition);
+}
+
+alert(flip(myString));
+
 // BONUS: If you are bored by all that, write a function that checks if a given string is a palindrome.
