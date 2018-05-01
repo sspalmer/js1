@@ -93,7 +93,7 @@ h1.addEventListener('mouseup', (e) => {
 */
 
 
-
+/*
 //******* DAY7 STUFF ********
 // textContent
 const h1 = document.querySelector('h1');
@@ -115,3 +115,33 @@ const h1 = document.querySelector('h1');
 
 h1.addEventListener('mouseup', (e) => {
 });
+
+*/
+
+//******  Takehome Day6
+// Employ a function that accepts two arguments: temperature and scale (either celcius or fahrenheit).
+// Display the temperature in an h3 with minimal styling.
+// When the user clicks on the h3, run the function to convert the temperature.
+// Display the converted temperature in the h3.
+
+function displayTemp(temp, scale) {
+  if (scale == 'F') {
+    temp = (temp - 32) / 1.8;
+    scale = 'C';
+  } else {
+    temp = (temp * 1.8) + 32;
+    scale = 'F'
+  };
+  return temp + scale;
+};
+
+const h3 = document.querySelector('h3');
+
+h3.addEventListener('click', (e) => {
+  h3.textContent = displayTemp(myTemp, myScale);
+});
+
+let myTemp = prompt('Enter temperature :');
+let myScale = prompt('Enter the scale F/C :');
+myScale = myScale.toUpperCase();
+h3.textContent = myTemp + myScale;
