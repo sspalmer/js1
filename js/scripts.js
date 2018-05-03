@@ -153,7 +153,7 @@ myImg.addEventListener('click', () => (changeImg()));
 const body = document.querySelector('body');
 
 for (let i = 1; i <= 100; i++) {
-  let p = document.createElement('p'); //creates a p-tag each timeout
+  let p = document.createElement('p'); //creates a p-tag each time
   if((i % 3 === 0) && (i % 5 === 0)) {
     p.textContent = 'FizzBuzz';
   } else if (i % 3 === 0) {
@@ -163,5 +163,5 @@ for (let i = 1; i <= 100; i++) {
   } else {
     p.textContent = i;
   }
-  body.appendChild(p);
+  body.appendChild(p); //adds a new p-tag to the body
 };
