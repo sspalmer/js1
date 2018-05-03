@@ -95,6 +95,8 @@ h1.addEventListener('mouseup', (e) => {
 
 
 //******* DAY7 STUFF ********
+
+/*
 // textContent
 const h1 = document.querySelector('h1');
 
@@ -108,10 +110,58 @@ const h1 = document.querySelector('h1');
 h1.addEventListener('mouseup', (e) => {
   h1.innerHTML = 'yellow';
 });
+*/
 
-
+/*
 // createElement
 const h1 = document.querySelector('h1');
 
 h1.addEventListener('mouseup', (e) => {
 });
+
+//.classList
+button.addEventListener('click', (e) => {
+  div.classList.remove('text-center');
+});
+
+function checkForRed(element) {
+  element.classList.contains('red-text') ?
+  element.classList.remove('red-text') : //......;
+  // if (element.classList.contains('red-text')) {
+  //   element.classList.remove('red-text');
+  //   //...also add a class of some importance
+  // } else {
+  //   //add the red text class
+  // }
+};
+*/
+
+/*
+//.setAttribute
+//Element.setAttribute(name, value);
+const myImg = document.querySelector('img');
+
+function changeImg(){
+  myImg.setAttribute('src', 'https://goo.gl/images/OTqyfQ');
+}
+
+myImg.addEventListener('click', () => (changeImg()));
+*/
+
+//TRY IT
+// Write a program that prints on the page all numbers from 1 to 100. For multiples of three print “Fizz” instead of the number. For multiples of five print “Buzz” instead of the number. For numbers which are multiples of both three and five print “FizzBuzz”.
+const body = document.querySelector('body');
+
+for (let i = 1; i <= 100; i++) {
+  let p = document.createElement('p'); //creates a p-tag each timeout
+  if((i % 3 === 0) && (i % 5 === 0)) {
+    p.textContent = 'FizzBuzz';
+  } else if (i % 3 === 0) {
+    p.textContent = 'Fizz';
+  } else if (i % 5 === 0) {
+    p.textContent = 'Buzz';
+  } else {
+    p.textContent = i;
+  }
+  body.appendChild(p);
+};
